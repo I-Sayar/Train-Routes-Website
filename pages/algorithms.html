@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        section{
+            display: block;
+            padding: 25px 150px;
+            color:rgb(255, 197, 197);
+        }
+        .top{
+            display: flex;
+            flex-direction: row;
+        }
+        .bottom{
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+        }
+        .mid{
+            background: rgb(58, 55, 55);
+            width: 280px;
+            height: 200px;
+        }
+        .algo{
+            background-color: rgb(255, 197, 197);
+            text-align: center;
+            width: 500px;
+            height: 280px;
+            color: rgb(58, 55, 55);
+            padding: 5px;
+            border-radius: 5px;
+            display: block
+        }
+        .blank{
+            background: rgb(58, 55, 55);
+            width: 50px;
+            height: 50px;
+        }
+        .code, .watch{
+            background: rgb(58, 55, 55);
+            color: rgb(255, 197, 197);
+            padding: 5px;
+            border-radius: 5px;
+            margin:auto;
+        }
+        a {
+            text-decoration: none;
+            color:  rgb(255, 197, 197);
+        }
+        a:hover{
+            text-decoration: underline;
+            border-radius: 3px;
+            padding: 10px 0px;
+        }
+        h4{
+            margin-top: -15px;
+        }
+        .title{
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "../index.html"><strong>Home</strong></a></li>
+                <li><a href = "resources.html"><strong>Travel Resources</strong></a></li>
+                <li id = "logo">Train Logo</li>
+                <li><a href = "route.html"><strong>Find Route</strong> </a></li>
+                <li><a href = "algorithms.html"><strong>Different Algorithms</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class = "actual">
+        <div class = title> 
+            <strong>Shortest Path Algorithms</strong>
+        </div>
+        <div class = "top"> 
+            <div class = "algo">
+                <h1>
+                    <strong>Dijkstra</strong>
+                </h1>
+                <h5>
+                    Dijkstra's algorithm helps you figure out the shortest path from one place to another by gradually exploring and updating the distances as you move through connected cities on the map. It works by choosing a starting location and appending (adding) it to a priority queue with a heap (min heap, sorts from smallest to highest value). You then loop over this queue until it’s empty, each time popping off (removing) a station and appending all the other stations that you can get to from there back into the queue along with the distance away added to the amount travelled. Once you get to the station you were looking for, you’ll have found the shortest path. “BFS” is the unweighted version of this algorithm.
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/dijkstra.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+            <div class = "blank"></div>
+            <div class = "algo">
+                <h1>
+                    <strong>A*</strong>
+                </h1>
+                <h4>
+                    A Star
+                </h4>
+                <h5>
+                    A* is extremely similar to Dijkstra, only difference being, A* requires a heuristic.  The heuristic in A* is like having a smart guess to guide you. Since it is moving through the map while making informed decisions, it is more efficient and faster than Dijkstra. The heuristic used here is combining the distance travelled so far with the distance to the next city with the distance directly to the last city (ignoring all stations).
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/a_star.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "bottom">
+            <div class = "mid"></div>
+            <div class = "algo"> 
+                <h1>
+                    <strong>Bi Dijkstra</strong>
+                </h1>
+                <h4>
+                    Bidirectional Dijkstra
+                </h4>
+                <h5>
+                    Bidirectional dijkstra is the same as dijkstra except it starts at both sides ( starting station and ending station) and meets in the middle. The idea behind bidirectional Dijkstra is to reduce the number of nodes explored, making the search more efficient. It is quite useful in scenarios where the graph is large or the distance between source and destination is considerable.                
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/bidijkstra.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+            <div class = "mid"></div>
+        </div>
+    </section>
+    <section class = "funtowatch">
+        <div class = title> 
+            <strong>Fun to Watch Algorithms</strong>
+        </div>
+        <div class = "top">
+            <div class = "algo">
+                <h1>
+                    <strong>DFS</strong>
+                </h1>
+                <h4>
+                    Depth First Search
+                </h4>
+                <h5>
+                    DFS is like exploring a maze by going as deep as possible along one path before trying another. It uses a normal queue instead of a heap therefore not paying attention to the weights or find the shortest path. It’s goal is just finding a path to the goal, returning the first one it stumbles upon.
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/dfs.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+            <div class = "blank"></div>
+            <div class = "algo">
+                <h1>
+                    <strong>ID-DFS</strong>
+                </h1>
+                <h4>
+                    Iterative Deepening Depth First Search
+                </h4>
+                <h5>
+                    ID-DFS begins with a depth of 0 and performs a DFS, if goal is not found, it increments the depth limit and performs another DFS. Every single time the limit is increased, everything previously searched is discarded, due to this it is can be quite inefficient as it ends up searching the same nodes over and over again. It holds an advantage in terms of low memory usage and is particularly useful when the depth of the goal is unknown.           
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/iddfs.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class = "bottom">
+            <div class = "algo">
+                <h1>
+                    <strong>Reverse A*</strong>
+                </h1>
+                <h4>
+                    Reverse A Star
+                </h4>
+                <h5>
+                    Reverse A* works exactly like A* expect that it finds the longest path rather than the shortest one. The values of the heuristic are negated to make the min heap into a max heap.             
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/reverse_a_star.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+            <div class = "blank"></div>
+            <div class = "algo">
+                <h1>
+                    <strong>Random Search</strong>
+                </h1>
+                <h5>
+                    Random search works the same as DFS but instead of a queue, you have a list which uses a random number generator to pop off (remove) a random index. This is not an actual search algorithm :c             
+                </h5>
+                <ul>
+                    <li class = "code"><a href="code/random.html"><strong>VIEW CODE</strong></a></li>
+                    <li class = "watch"><a href ="code/watch/notyet.html"><strong>WATCH IT RUN</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

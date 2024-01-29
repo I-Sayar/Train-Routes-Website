@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        section{
+            display: block;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+        .row div{
+            padding: auto;
+            margin-left:10px;
+
+        }
+        #last{
+            padding-left: 25px;
+        }
+        .block{
+            display: block;
+            text-align: center;
+            left:-20px;
+            position: relative;
+        }
+        select{
+            border: none;
+            outline: none;
+            background: rgb(255, 211, 89);
+            color: rgb(63, 63, 63);
+            border-radius: 10px;
+            margin: 10px 20px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "../index.html"><strong>Home</strong></a></li>
+                <li><a href = "resources.html"><strong>Travel Resources</strong></a></li>
+                <li id = "logo">Train Logo</li>
+                <li><a href = "route.html"><strong>Find Route</strong> </a></li>
+                <li><a href = "algorithms.html"><strong>Different Algorithms</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class= "selectors">
+        <div class = "block">
+            <div class = "row">
+                <div>Select departing station:</div>
+                <div>Select destination:</div>
+                <div id = "last">Select algorithm:</div>
+            </div>
+            <div class = "row">
+                <select name= "city1">
+                    <option value="Albuquerque">Albuquerque</option>
+                    <option value="Atlanta">Atlanta</option>
+                    <option value="Austin">Austin</option>
+                    <option value="Brooklyn">Brooklyn</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Charlotte">Charlotte</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Ciudad Juarez">Ciudad Juarez</option>
+                    <option value="Columbus">Columbus</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Denver">Denver</option>
+                    <option value="Detroit">Detroit</option>
+                    <option value="Edmonton">Edmonton</option>
+                    <option value="Fort Worth">Fort Worth</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                    <option value="Hermosillo">Hermosillo</option>
+                    <option value="Houston">Houston</option>
+                    <option value="Indianapolis">Indianapolis</option>
+                    <option value="Jacksonville">Jacksonville</option>
+                    <option value="Kansas City">Kansas City</option>
+                    <option value="Las Vegas">Las Vegas</option>
+                    <option value="Leon">Leon</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Merida">Merida</option>
+                    <option value="Mexicali">Mexicali</option>
+                    <option value="Mexico City">Mexico City</option>
+                    <option value="Miami">Miami</option>                   
+                    <option value="Milwaukee">Milwaukee</option>
+                    <option value="Minneapolis">Minneapolis</option>
+                    <option value="Monterrey">Monterrey</option>
+                    <option value="Montreal">Montreal</option>
+                    <option value="Orlando">Orlando</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Philadelphia">Philadelphia</option>
+                    <option value="Phoenix">Phoenix</option>
+                    <option value="Portland">Portland</option>
+                    <option value="Quebec City">Quebec City</option>                   
+                    <option value="St Louis">St Louis</option>
+                    <option value="San Antonio">San Antonio</option>
+                    <option value="San Diego">San Diego</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>                  
+                    <option value="Tampa">Tampa</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Tucson">Tucson</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Washington D.C.">Washington D.C.</option>
+                    <option value="Winnipeg">Winnipeg</option>
+                </select>
+                <select name= "city2">
+                    <option value="Albuquerque">Albuquerque</option>
+                    <option value="Atlanta">Atlanta</option>
+                    <option value="Austin">Austin</option>
+                    <option value="Brooklyn">Brooklyn</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Charlotte">Charlotte</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Ciudad Juarez">Ciudad Juarez</option>
+                    <option value="Columbus">Columbus</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Denver">Denver</option>
+                    <option value="Detroit">Detroit</option>
+                    <option value="Edmonton">Edmonton</option>
+                    <option value="Fort Worth">Fort Worth</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                    <option value="Hermosillo">Hermosillo</option>
+                    <option value="Houston">Houston</option>
+                    <option value="Indianapolis">Indianapolis</option>
+                    <option value="Jacksonville">Jacksonville</option>
+                    <option value="Kansas City">Kansas City</option>
+                    <option value="Las Vegas">Las Vegas</option>
+                    <option value="Leon">Leon</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Merida">Merida</option>
+                    <option value="Mexicali">Mexicali</option>
+                    <option value="Mexico City">Mexico City</option>
+                    <option value="Miami">Miami</option>                   
+                    <option value="Milwaukee">Milwaukee</option>
+                    <option value="Minneapolis">Minneapolis</option>
+                    <option value="Monterrey">Monterrey</option>
+                    <option value="Montreal">Montreal</option>
+                    <option value="Orlando">Orlando</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Philadelphia">Philadelphia</option>
+                    <option value="Phoenix">Phoenix</option>
+                    <option value="Portland">Portland</option>
+                    <option value="Quebec City">Quebec City</option>                   
+                    <option value="St Louis">St Louis</option>
+                    <option value="San Antonio">San Antonio</option>
+                    <option value="San Diego">San Diego</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>                  
+                    <option value="Tampa">Tampa</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Tucson">Tucson</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Washington D.C.">Washington D.C.</option>
+                    <option value="Winnipeg">Winnipeg</option>
+                </select>
+                <select id = "algotithms">
+                    <option value="Dijkstra">Dijkstra</option>
+                    <option value="A*">A*</option>
+                    <option value="Bidirectional Dijkstra">Bidirectional Dijkstra</option>
+                    <option value="DFS">DFS</option>
+                    <option value="ID-DFS">ID-DFS</option>
+                    <option value="Reverse A*">Reverse A*</option>
+                    <option value="Random">Random</option>
+                </select>
+            </div>
+        </div>
+        <div id = "container">
+            <div id = "image_container">
+                <img src="namap.png" usemap="#image-map">
+                <map name="image-map">
+                    <area target="" alt="Washington DC" title="Washington DC" href="" coords="760,428,9" shape="circle">
+                    <area target="" alt="Austin" title="Austin" href="" coords="598,482,7" shape="circle">
+                    <area target="" alt="Atlanta" title="Atlanta" href="" coords="703,475,10" shape="circle">
+                    <area target="" alt="Albuquerque" title="Albuquerque" href="" coords="496,450,9" shape="circle">
+                    <area target="" alt="Calgary" title="Calgary" href="" coords="433,298,9" shape="circle">
+                    <area target="" alt="Charlotte" title="Charlotte" href="" coords="735,458,7" shape="circle">
+                    <area target="" alt="Chicago" title="Chicago" href="" coords="679,341,9" shape="circle">
+                    <area target="" alt="Chihuahua" title="Chihuahua" href="" coords="544,523,8" shape="circle">
+                    <area target="" alt="Ciudad Juarez" title="Ciudad Juarez" href="" coords="537,493,9" shape="circle">
+                    <area target="" alt="Columbus" title="Columbus" href="" coords="705,366,9" shape="circle">
+                    <area target="" alt="Dallas" title="Dallas" href="" coords="606,458,9" shape="circle">
+                    <area target="" alt="Denver" title="Denver" href="" coords="552,412,9" shape="circle">
+                    <area target="" alt="Detroit" title="Detroit" href="" coords="712,340,8" shape="circle">
+                    <area target="" alt="Edmonton" title="Edmonton" href="" coords="448,259,8" shape="circle">
+                    <area target="" alt="Guadalajara" title="Guadalajara" href="" coords="551,579,9" shape="circle">
+                    <area target="" alt="Hermosillo" title="Hermosillo" href="" coords="486,504,10" shape="circle">
+                    <area target="" alt="Houston" title="Houston" href="" coords="615,499,7" shape="circle">
+                    <area target="" alt="Indianapolis" title="Indianapolis" href="" coords="671,364,8" shape="circle">
+                    <area target="" alt="Jacksonville" title="Jacksonville" href="" coords="737,508,6" shape="circle">
+                    <area target="" alt="Kansas City" title="Kansas City" href="" coords="625,398,13" shape="circle">
+                    <area target="" alt="Las Vegas" title="Las Vegas" href="" coords="447,436,7" shape="circle">
+                    <area target="" alt="Leon" title="Leon" href="" coords="574,571,7" shape="circle">
+                    <area target="" alt="Los Angeles" title="Los Angeles" href="" coords="432,459,8" shape="circle">
+                    <area target="" alt="Merida" title="Merida" href="" coords="674,579,7" shape="circle">
+                    <area target="" alt="Mexicali" title="Mexicali" href="" coords="455,476,7" shape="circle">
+                    <area target="" alt="Mexico City" title="Mexico City" href="" coords="584,595,8" shape="circle">
+                    <area target="" alt="Miami" title="Miami" href="" coords="743,541,9" shape="circle">
+                    <area target="" alt="Minneapolis" title="Minneapolis" href="" coords="NaN" shape="circle">
+                    <area target="" alt="Monterrey" title="Monterrey" href="" coords="633,332,9" shape="circle">
+                    <area target="" alt="Montreal" title="Montreal" href="" coords="792,341,7" shape="circle">
+                    <area target="" alt="Orlando" title="Orlando" href="" coords="734,523,7" shape="circle">
+                    <area target="" alt="Ottawa" title="Ottawa" href="" coords="768,348,7" shape="circle">
+                    <area target="" alt="Philadelphia" title="Philadelphia" href="" coords="775,412,8" shape="circle">
+                    <area target="" alt="Phoenix" title="Phoenix" href="" coords="472,459,7" shape="circle">
+                    <area target="" alt="Portland" title="Portland" href="" coords="NaN" shape="circle">
+                    <area target="" alt="Quebec City" title="Quebec City" href="" coords="824,330,8" shape="circle">
+                    <area target="" alt="St Louis" title="St Louis" href="" coords="720,403,7" shape="circle">
+                    <area target="" alt="San Antonio" title="San Antonio" href="" coords="594,499,7" shape="circle">
+                    <area target="" alt="San Diego" title="San Diego" href="" coords="440,477,7" shape="circle">
+                    <area target="" alt="San Francisco" title="San Francisco" href="" coords="398,430,9" shape="circle">
+                    <area target="" alt="San Jose" title="San Jose" href="" coords="408,445,7" shape="circle">
+                    <area target="" alt="Seattle" title="Seattle" href="" coords="401,340,8" shape="circle">
+                    <area target="" alt="Tampa" title="Tampa" href="" coords="721,509,7" shape="circle">
+                    <area target="" alt="Toronto" title="Toronto" href="" coords="745,346,9" shape="circle">
+                    <area target="" alt="Tucson" title="Tucson" href="" coords="480,475,8" shape="circle">
+                    <area target="" alt="Vancouver" title="Vancouver" href="" coords="408,315,9" shape="circle">
+                    <area target="" alt="Winnipeg" title="Winnipeg" href="" coords="601,291,10" shape="circle">
+                    <area target="" alt="Brooklyn" title="Brooklyn" href="" coords="793,396,9" shape="circle">
+                    <area target="" alt="Portland" title="Portland" href="" coords="392,355,8" shape="circle">
+                </map>
+            </div>
+        </div>
+        <h1>I havent gotten to implementing <br/> graphics in javascript yet!</h1>
+        <h4>Can run the program with python under "Train" folder</h4>
+    </section>
+</body>
+</html>

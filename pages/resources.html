@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        section{
+            display: block;
+            padding: 10px 10px;
+            color:rgb(58, 55, 55);
+        }
+        .with li{
+            font-size:17px;
+        }
+        .with ul{
+            text-align: left;
+            font-size: 17px;
+        }
+
+        div {
+            display: block;
+            background-color: rgb(255, 211, 89);
+            border-radius: 10px;
+            padding: 5px;
+            margin: 20px;
+        }
+        footer{
+            color:rgb(63, 63, 63);
+            background-color: rgb(255, 211, 89);
+            padding: 20px;
+            display: inline-block;
+            text-align: center;
+            margin: 0px 200px;
+            border-radius: 10px;
+        }
+        #foot{
+            display: flex;
+            flex-direction: row;
+            font-size: 19px;
+            text-align: left;
+
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: space-between;
+            background: rgb(223, 223, 223);
+            border-radius: 10px;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        input{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+            font-size: 15px;
+            color: rgb(58, 55, 55);
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: rgb(63, 63, 63);
+            color: rgb(223, 223, 223);
+            padding: 16px 50px;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+        .check{
+            display: block;
+        }
+        .check li{
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+        .check li::before{
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 30px;
+            border-radius: 50%;
+            background-image: url("../images/unchecked.png");
+            background-size: cover;
+            background-position: center;
+            top: 8px;
+            left: 8px;
+        }
+        .check li.checked{
+            color: #555;
+            text-decoration: line-through;
+        }
+        .check li.checked::before{
+            background-image: url("../images/checked.png");
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "../index.html"><strong>Home</strong></a></li>
+                <li><a href = "resources.html"><strong>Travel Resources</strong></a></li>
+                <li id = "logo">Train Logo</li>
+                <li><a href = "route.html"><strong>Find Route</strong> </a></li>
+                <li><a href = "algorithms.html"><strong>Different Algorithms</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div >
+            <h1>
+                Tips for Train Safety
+            </h1>
+            <ul class = "with">
+                <li><strong>Pay attention to announcements</strong></li><ul><li>Always stay attentive to station announcements for important information about train arrivals, departures, and safety updates.</li></ul>
+                <li><strong>Avoid dangerous distractions</strong></li><ul><li> Keep yourself and others safe by refraining from distractions like texting or playing loud music, especially when near train tracks and platforms.</li></ul>
+                <li><strong>Plan Ahead</strong></li><ul><li> Ensure a smooth journey by planning ahead and familiarizing yourself with train and bus schedules to avoid any last-minute rush or confusion.</li></ul>
+                <li><strong>Be Alert</strong></li><ul> <li>Avoid dangerous distractions such as texting or loud music, especially when near railroad tracks. Stay focused on your surroundings and be cautious at all times.</li></ul>
+                <li><strong>Stay Back</strong></li><ul><li>Always stand clear of the platform edge and follow designated safety markings like yellow lines to maintain a safe distance.</li></ul>
+                <li><strong>Secure belongings</strong></li><ul><li>Safeguard your belongings by keeping valuables secure, whether in your bag or pocket, to prevent loss or theft during your journey.</li></ul>
+                <li><strong>Stay Away</strong></li><ul><li>Be extremely cautious and never step onto the tracks, ensuring your safety and adhering to the designated pathways and walkways.</li></ul>
+                <li><strong>Protect Children</strong></li><ul><li>Prioritize the safety of young children by holding hands, preventing accidental separation and ensuring they stay away from potential hazards</li></ul>
+
+
+            </ul>
+        </div>
+        <div>
+            <h1>
+                Packing Checklist
+            </h1>
+            <div class = "row">
+                <input type=" text" id = "input-box" placeholder="Add onto the checklist">
+                <button onclick = "addTask()">Add</button>
+                <button onclick = "emptyList()">Empty</button>
+            </div>
+            <ul class= "check" id = "list-container">
+                <!--<li class = "checked">Task1</li>
+                <li>Task2</li>
+                <li>Task3</li> -->
+                <li>Headphones</li>
+                <li>Eye Mask</li>
+                <li>Snacks</li>
+                <li>Book</li>
+                <li>Hand Sanitizer</li>
+                <li>Water Bottle</li>
+                <li>Blanket</li>
+                <li>Powerbank</li>
+
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <h1><strong>Train Etiquette</strong></h1>
+        <div id = "foot">
+            <ul >
+                <li>Let passengers exit before you enter</li>
+                <li>Keep your phone on silent</li>
+                <li>Keep quite</li>
+            </ul>
+            <ul>
+                <li>Mind your space</li>
+                <li>Do not take phone calls</li>
+                <li>Let the doors close</li>
+            </ul>
+            <ul >
+                <li>Offer your seat to the elderly</li>
+                <li>No eating or drinking</li>
+                <li>Bring headphones</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
