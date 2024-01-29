@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        section{
+            display: flex;
+            flex-direction: row;
+            display: block;
+            text-align: center;
+
+        }      
+        pre{
+            color: rgb(255, 197, 197);
+            font-size: 18px;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "../../index.html"><strong>Home</strong></a></li>
+                <li><a href = "../resources.html"><strong>Travel Resources</strong></a></li>
+                <li id = "logo">Train Logo</li>
+                <li><a href = "../route.html"><strong>Find Route</strong> </a></li>
+                <li><a href = "../algorithms.html"><strong>Different Algorithms</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <pre>
+            def Bidirectional_Dijkstra(start, end):
+                if start == end:
+                    return (0, [start, end])
+                start_fringe = []
+                start_visited = set()
+                start_node = (0, start, [start])
+                heappush(start_fringe, start_node)
+                end_fringe = []
+                end_visited = set()
+                end_node = (0,end, [end])
+                smallest_start = sys.maxsize
+                smallest_end = sys.maxsize
+                smallest_start_fringe = []
+                smallest_end_fringe = []
+                heappush(end_fringe, end_node)
+                while start_fringe or end_fringe:
+                    if start_fringe:
+                        start_depth, start_v, start_list = heappop(start_fringe)
+                        if start_v not in start_visited and start_depth <= smallest_start:
+                            start_visited.add(start_v)
+                            for c in graph[start_v]:
+                                child, distance = c
+                                #if child not in start_visited:
+                                if child in end_visited:
+                                    root.update()
+                                    if (depth:= start_depth+distance) < smallest_start:
+                                        smallest_start = start_depth
+                                        smallest_start_fringe = start_list + [child]
+                                heappush(start_fringe,((start_depth + distance, child, start_list + [child])))
+                    if end_fringe:
+                        end_depth, end_v, end_list = heappop(end_fringe)
+                        if end_v not in end_visited and end_depth <= smallest_end:
+                            end_visited.add(end_v)
+                            for c in graph[end_v]:
+                                child, distance = c
+                                if child in start_visited:
+                                    if (depth:= end_depth+distance) < smallest_end:
+                                        smallest_end = end_depth
+                                        smallest_end_fringe = end_list
+                                heappush(end_fringe,((end_depth + distance, child, [child] + end_list)))
+                return smallest_start +smallest_end, smallest_start_fringe + smallest_end_fringe
+        </pre>
+    </section>
+</body>
+</html>

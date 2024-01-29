@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        section{
+            display: flex;
+            flex-direction: row;
+            display: block;
+            text-align: center;
+
+        }      
+        pre{
+            color: rgb(255, 197, 197);
+            font-size: 18px;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href = "../../index.html"><strong>Home</strong></a></li>
+                <li><a href = "../resources.html"><strong>Travel Resources</strong></a></li>
+                <li id = "logo">Train Logo</li>
+                <li><a href = "../route.html"><strong>Find Route</strong> </a></li>
+                <li><a href = "../algorithms.html"><strong>Different Algorithms</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <pre>def Reverse_Astar(start, end):
+        closed = set()
+        start_node = (-1*calcd(nodes[start], nodes[end]), 0, start, [start])
+        fringe = []
+        heappush(fringe, start_node)
+        while fringe:
+            v = heappop(fringe)
+            estimite, depth, state, path = v
+            if state == end:
+                return depth, path
+            if state not in closed:
+                closed.add(state)
+                for c in graph[state]:
+                    child, distance = c
+                    if child not in closed:
+                        temp = (-1*depth - calcd(nodes[child], nodes[end])-distance, depth + distance, child, path+[child])
+                        heappush(fringe, temp)
+        return None</pre>
+    </section>
+</body>
+</html>
